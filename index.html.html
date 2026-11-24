@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZhamTech helps organizations modernize technology through IT consulting, cloud and infrastructure, data engineering, cybersecurity, and custom software.">
+<title>ZhamTech | Technology, Engineered Forward</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--panel2:#10233a;--text:#edf4ff;--muted:#9db0c9;--blue:#55a7ff;--cyan:#6ce5ed;--line:rgba(169,202,239,.14);--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.84);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.08em;font-size:1.15rem}.mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#061321;font-weight:950;box-shadow:0 8px 28px #3b9cff40}.brand span:last-child{color:var(--blue)}.links{display:flex;gap:30px;color:#bdcce0;font-size:.91rem}.links a:hover{color:var(--cyan)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 20px;font-weight:750;font-size:.9rem;transition:.2s}.nav-cta,.btn.primary{background:linear-gradient(110deg,var(--blue),var(--cyan));color:#061321}.nav-cta:hover,.btn.primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px #48a9ff38}.menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
+.hero{position:relative;overflow:hidden;padding:112px 0 96px;background:radial-gradient(ellipse at 80% 22%,#16447766,transparent 38%),radial-gradient(ellipse at 10% 90%,#0b667455,transparent 36%),linear-gradient(180deg,#09182a 0%,var(--bg) 100%)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(150,190,230,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(150,190,230,.045) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 90%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:.77rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase}.eyebrow:before{content:"";width:24px;height:1px;background:var(--cyan)}h1{font-size:clamp(3rem,6.3vw,5.65rem);line-height:1.02;letter-spacing:-.065em;margin:22px 0 24px;max-width:720px}h1 em{font-style:normal;background:linear-gradient(100deg,#65b5ff,#75e7e6);background-clip:text;color:transparent}.lead{font-size:1.12rem;color:#b0c1d7;max-width:590px;line-height:1.8}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.btn.secondary{border:1px solid #8aa9c84d;color:#e5f0ff}.btn.secondary:hover{background:#ffffff0c;border-color:#8abfff}.hero-note{margin-top:27px;color:#8299b5;font-size:.82rem}
+.visual{min-height:430px;position:relative;display:grid;place-items:center}.orbit{position:absolute;width:350px;height:350px;border:1px solid #66baff35;border-radius:50%;box-shadow:0 0 90px #268cff12,inset 0 0 70px #268cff0b}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #66baff24;border-radius:50%;inset:32px}.orbit:after{inset:70px}.core{width:180px;height:180px;border-radius:36px;display:grid;place-items:center;background:linear-gradient(145deg,#163b60,#0d2035);border:1px solid #7ccaff66;box-shadow:0 0 80px #3c9dff35, inset 0 1px #ffffff20;transform:rotate(-8deg)}.core-inner{transform:rotate(8deg);text-align:center}.core b{font-size:2.8rem;letter-spacing:-.1em;color:#8dd5ff}.core small{display:block;color:#b7d7ef;font-size:.65rem;letter-spacing:.2em}.float{position:absolute;background:#10243aee;border:1px solid #7bbdff3b;border-radius:14px;padding:13px 16px;box-shadow:0 14px 40px #0005;backdrop-filter:blur(10px);font-size:.82rem;color:#d8eaff}.float strong{display:block;color:var(--cyan);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}.f1{top:47px;left:0}.f2{right:-5px;top:145px}.f3{bottom:40px;left:35px}
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0a1727}.trust-inner{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:25px 0;color:#9eb2ca;font-size:.82rem}.trust-label{letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:#6f89a7}.trust-items{display:flex;gap:28px;flex-wrap:wrap}.trust-items span{font-weight:700;color:#c5d5e8}
+section{padding:100px 0}.section-head{max-width:690px;margin-bottom:48px}.kicker{color:var(--cyan);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:850}.section-head h2{font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-.05em;line-height:1.12;margin:13px 0 17px}.section-head p{color:var(--muted);font-size:1.03rem}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{padding:28px;border:1px solid var(--line);background:linear-gradient(145deg,#102238,#0a1727);border-radius:20px;min-height:250px;transition:.25s}.service:hover{transform:translateY(-5px);border-color:#64baff70;box-shadow:0 18px 45px #0003}.icon{width:46px;height:46px;border-radius:13px;background:#55a7ff18;border:1px solid #55a7ff40;display:grid;place-items:center;color:var(--cyan);font-size:1.25rem}.service h3{font-size:1.12rem;margin:21px 0 9px}.service p{color:var(--muted);font-size:.91rem;margin:0}.service .more{display:inline-block;color:var(--cyan);font-size:.82rem;font-weight:750;margin-top:20px}
+.about{background:linear-gradient(180deg,#0a1727,#091523);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}.about-panel{padding:32px;border:1px solid #70bfff36;border-radius:24px;background:radial-gradient(circle at 80% 10%,#1a527a70,transparent 50%),#0d2034}.about-panel .big{font-size:4rem;font-weight:900;letter-spacing:-.08em;color:#83caff;line-height:1}.about-panel h3{font-size:1.35rem;margin:15px 0 8px}.about-panel p{color:var(--muted);font-size:.93rem}.pill-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.pill{border:1px solid #8abfff38;border-radius:999px;padding:7px 11px;color:#c9def4;font-size:.75rem}.about-copy h2{font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.05em;line-height:1.12;margin:14px 0 18px}.about-copy p{color:var(--muted)}.principles{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}.principle{border-left:2px solid var(--blue);padding-left:14px}.principle strong{display:block;font-size:.95rem}.principle span{font-size:.82rem;color:var(--muted)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{border-top:1px solid #5aaeff65;padding-top:20px}.step .num{font-size:.75rem;color:var(--cyan);font-weight:850;letter-spacing:.12em}.step h3{font-size:1.05rem;margin:12px 0 8px}.step p{font-size:.88rem;color:var(--muted)}
+.cta{padding:78px 0;background:radial-gradient(ellipse at 50% 0%,#1d5c8d65,transparent 65%),#0b1a2c;border-top:1px solid var(--line)}.cta-box{border:1px solid #75c2ff3b;border-radius:26px;padding:55px;text-align:center;background:#0e2238b8}.cta h2{font-size:clamp(2.2rem,4vw,3.6rem);letter-spacing:-.05em;line-height:1.1;margin:12px auto 15px;max-width:760px}.cta p{color:var(--muted);max-width:590px;margin:0 auto}.cta .actions{justify-content:center}
+footer{padding:30px 0;background:#06101c;border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#8297b1;font-size:.8rem}.footer-links{display:flex;gap:20px}.footer-links a:hover{color:var(--cyan)}
+@media(max-width:850px){.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding:82px 0 65px}.visual{min-height:360px}.services{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}.trust-inner{align-items:flex-start;flex-direction:column}.about-grid{gap:38px}}
+@media(max-width:600px){.wrap{width:min(100% - 34px,1160px)}.links,.nav-cta{display:none}.menu{display:block}.links.open{display:flex;position:absolute;top:78px;left:0;right:0;background:#091727;padding:22px;flex-direction:column;gap:18px;border-bottom:1px solid var(--line)}h1{font-size:3.15rem}.hero-grid{gap:15px}.visual{min-height:310px;transform:scale(.86);margin:-15px 0}.orbit{width:300px;height:300px}.services{grid-template-columns:1fr}.service{min-height:unset}.process{grid-template-columns:1fr 1fr}.cta-box{padding:35px 20px}.footer-row{align-items:flex-start;flex-direction:column}.trust-items{gap:13px 20px}section{padding:76px 0}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#top" aria-label="ZhamTech home"><span class="mark">Z</span> ZHAM<span>TECH</span></a>
+  <nav class="links" id="navlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#approach">Our approach</a><a href="#contact">Contact</a></nav>
+  <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+  <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+ </div>
+</header>
+<main id="top">
+ <section class="hero">
+  <div class="wrap hero-grid">
+   <div>
+    <div class="eyebrow">IT consulting · Software · Innovation</div>
+    <h1>Technology that moves <em>business forward.</em></h1>
+    <p class="lead">From smarter infrastructure to custom software and data-driven solutions, ZhamTech helps organizations turn complex technology challenges into practical progress.</p>
+    <div class="actions"><a class="btn primary" href="#contact">Discuss your project&nbsp; ↗</a><a class="btn secondary" href="#services">Explore our services</a></div>
+    <div class="hero-note">Practical expertise. Thoughtful engineering. Technology built around your goals.</div>
+   </div>
+   <div class="visual" aria-label="Abstract ZhamTech technology illustration">
+    <div class="orbit"></div><div class="core"><div class="core-inner"><b>Z</b><small>ZHAMTECH</small></div></div>
+    <div class="float f1"><strong>Cloud & infrastructure</strong>Built for reliability</div>
+    <div class="float f2"><strong>Data & intelligence</strong>Decisions with clarity</div>
+    <div class="float f3"><strong>Software engineering</strong>Solutions that scale</div>
+   </div>
+  </div>
+ </section>
+ <div class="trust"><div class="wrap trust-inner"><div class="trust-label">Technology, connected</div><div class="trust-items"><span>IT Strategy</span><span>Cloud & Infrastructure</span><span>Data Engineering</span><span>AI & Automation</span><span>Software</span></div></div></div>
+ <section id="services">
+  <div class="wrap">
+   <div class="section-head"><div class="kicker">What we do</div><h2>Technology services for what comes next.</h2><p>Whether you need a trusted technical partner or support with a specific initiative, we bring the right mix of planning, engineering, and execution.</p></div>
+   <div class="services">
+    <article class="service"><div class="icon">⌘</div><h3>IT Consulting & Strategy</h3><p>Make confident technology decisions with architecture guidance, technical assessments, roadmaps, and hands-on implementation support.</p><a class="more" href="#contact">Plan your next move ↗</a></article>
+    <article class="service"><div class="icon">⌁</div><h3>Cloud & Infrastructure</h3><p>Design, modernize, and support dependable environments across cloud platforms, Linux systems, networking, and infrastructure.</p><a class="more" href="#contact">Build a stronger foundation ↗</a></article>
+    <article class="service"><div class="icon">▤</div><h3>Database & Data Engineering</h3><p>Improve database reliability and performance while building practical data pipelines, integrations, reporting, and analytics foundations.</p><a class="more" href="#contact">Put your data to work ↗</a></article>
+    <article class="service"><div class="icon">✳</div><h3>AI & Intelligent Automation</h3><p>Identify useful AI opportunities and streamline repetitive workflows with automation and thoughtfully integrated intelligent tools.</p><a class="more" href="#contact">Explore AI opportunities ↗</a></article>
+    <article class="service"><div class="icon">⌨</div><h3>Custom Software Development</h3><p>Turn ideas and operational needs into secure, maintainable applications, APIs, integrations, and internal business tools.</p><a class="more" href="#contact">Create something useful ↗</a></article>
+    <article class="service"><div class="icon">◈</div><h3>Cybersecurity & IT Operations</h3><p>Strengthen your technology practices through risk-aware planning, system hardening, operational support, and better visibility.</p><a class="more" href="#contact">Improve your resilience ↗</a></article>
+   </div>
+  </div>
+ </section>
+ <section class="about" id="about">
+  <div class="wrap about-grid">
+   <div class="about-panel"><div class="big">ZT.</div><h3>Technology with a purpose.</h3><p>Good technology should solve real problems, support the people using it, and create room for the business to grow.</p><div class="pill-row"><span class="pill">Business-minded</span><span class="pill">Engineering-led</span><span class="pill">Built to evolve</span></div></div>
+   <div class="about-copy"><div class="kicker">Why ZhamTech</div><h2>A technical partner, not just another vendor.</h2><p>We believe the best solutions start with understanding the people, processes, and goals behind the technology. ZhamTech takes a practical, collaborative approach: clarify the challenge, choose the right tools, and deliver work that can be supported over time.</p><p>From a focused improvement to a larger modernization effort, our goal is to make technology easier to use, manage, and build upon.</p>
+    <div class="principles"><div class="principle"><strong>Clear communication</strong><span>Understandable guidance and honest expectations.</span></div><div class="principle"><strong>Practical solutions</strong><span>The right-sized approach for the problem.</span></div><div class="principle"><strong>Reliable foundations</strong><span>Maintainability, security, and resilience matter.</span></div><div class="principle"><strong>Long-term thinking</strong><span>Build for the next step, not only today.</span></div></div>
+   </div>
+  </div>
+ </section>
+ <section id="approach">
+  <div class="wrap">
+   <div class="section-head"><div class="kicker">How we work</div><h2>A clear path from challenge to solution.</h2><p>Good outcomes come from a disciplined process and close collaboration at every stage.</p></div>
+   <div class="process">
+    <div class="step"><div class="num">01 / DISCOVER</div><h3>Understand the need</h3><p>We learn about your goals, current environment, constraints, and what success should look like.</p></div>
+    <div class="step"><div class="num">02 / PLAN</div><h3>Shape the solution</h3><p>We define priorities, recommend an approach, and align on scope and next steps.</p></div>
+    <div class="step"><div class="num">03 / DELIVER</div><h3>Build and improve</h3><p>We execute collaboratively, communicate progress, and validate the work along the way.</p></div>
+    <div class="step"><div class="num">04 / SUPPORT</div><h3>Keep moving forward</h3><p>We document what matters and help make the solution ready to operate and evolve.</p></div>
+   </div>
+  </div>
+ </section>
+ <section class="cta" id="contact">
+  <div class="wrap"><div class="cta-box"><div class="kicker">Let's build what is next</div><h2>Have a technology challenge in mind?</h2><p>Tell us what you're working toward. Start a conversation with ZhamTech about your goals, your systems, and where the right technology could take you.</p><div class="actions"><a class="btn primary" href="mailto:">Contact ZhamTech&nbsp; ↗</a><a class="btn secondary" href="#services">Review our services</a></div><div class="hero-note">Add your business email to this contact button before publishing.</div></div></div>
+ </section>
+</main>
+<footer><div class="wrap footer-row"><a class="brand" href="#top"><span class="mark">Z</span> ZHAM<span>TECH</span></a><span>© <span id="year"></span> ZhamTech. All rights reserved.</span><div class="footer-links"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div></div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
